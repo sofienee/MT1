@@ -1,0 +1,275 @@
+﻿@model IEnumerable<MT.Models.ArticleMvcModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+
+<p>
+    <a href="@Url.Action("AddOrEdit","Article")" class="btn btn-default"><i class="fa fa-plus"></i> Create New</a>
+</p>
+<div style="overflow-x:auto;">
+    <table class="table table-striped">
+        <thead class="table-heading">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTCODE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTTYPE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTISACTIF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTORDRE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AFMID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTUNCODE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARUNLIBELLE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTDESIGNATION)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTDESIGNATIONMOBILE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTCODEBARRE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTISSTOCK)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTISVENDU)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTISFORFAIT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTSUIVISTOCK)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTISSTATISTIQUE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTISGARANTIE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTISSOUMISCOM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTISSOUMISREM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTPRIXACH)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTPRIXVEN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTPVISTTC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTSEUILVENTE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTQTEVENTEMINI)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTPOIDS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTUNITEPOIDS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTVOLUME)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTUNITEVOL)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTLARGEUR)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTLONGUEUR)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTHAUTEUR)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TVAID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTPHOTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ARTCOLISAGE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.USERUPDATE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.USERCREATE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DATECREATE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DATEUPDATE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DISTRIBUTEUR)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTCODE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTTYPE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTISACTIF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTORDRE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AFMID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTUNCODE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARUNLIBELLE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTDESIGNATION)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTDESIGNATIONMOBILE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTCODEBARRE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTISSTOCK)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTISVENDU)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTISFORFAIT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTSUIVISTOCK)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTISSTATISTIQUE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTISGARANTIE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTISSOUMISCOM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTISSOUMISREM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTPRIXACH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTPRIXVEN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTPVISTTC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTSEUILVENTE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTQTEVENTEMINI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTPOIDS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTUNITEPOIDS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTVOLUME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTUNITEVOL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTLARGEUR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTLONGUEUR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTHAUTEUR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TVAID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTPHOTO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ARTCOLISAGE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.USERUPDATE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.USERCREATE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DATECREATE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DATEUPDATE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DISTRIBUTEUR)
+                </td>
+                <td>
+                    <a href="@Url.Action("AddOrEdit", "Article", new { id = item.ARTID})" class="btn btn-default"><i class="fa fa-pencil"></i>  Edit</a>
+                    <a onclick="Delete(@item.ARTID)" class="btn btn-default"><i class="fa fa-trash"></i>  Delete</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>
+
+@section scripts{
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+
+        function Delete(id) {
+            alertify.confirm('DELETE IT ?','Are You Sure to Delete this Record ?',function(){
+                window.location.href  = '@Url.Action("Delete","Article")/'+id;
+            },null );
+        }
+    </script>
+}

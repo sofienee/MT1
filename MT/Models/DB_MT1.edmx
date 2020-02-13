@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MT_1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CAMION">
+          <Key>
+            <PropertyRef Name="CAMID" />
+          </Key>
+          <Property Name="CAMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CAMCODE" Type="varchar" MaxLength="255" />
+          <Property Name="CAMINTITULE" Type="varchar" MaxLength="255" />
+          <Property Name="DEPID" Type="int" />
+          <Property Name="DEVICEID" Type="int" />
+          <Property Name="CAMCHAUFFEURID" Type="int" />
+          <Property Name="CAMVENDEURID" Type="int" />
+          <Property Name="DOSID" Type="int" />
+          <Property Name="TIRCAM" Type="int" />
+          <Property Name="CAMISACTIF" Type="int" />
+          <Property Name="CAMMATRICULE" Type="varchar" MaxLength="255" />
+          <Property Name="CAMDISPO" Type="int" />
+          <Property Name="CAMDATEVIDANGE" Type="date" />
+          <Property Name="CAMVOLUME" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="CAMPOIDSSUPP" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="CAMLASTMISSION" Type="date" />
+          <Property Name="CAMMODELE" Type="varchar" MaxLength="255" />
+          <Property Name="CAMREFERENCE" Type="varchar" MaxLength="255" />
+          <Property Name="CAMVISITE" Type="date" />
+          <Property Name="CAMVIGNETTE" Type="date" />
+          <Property Name="CAMNOTE" Type="varchar" MaxLength="255" />
+          <Property Name="NUMEROTATION_PREFIX" Type="varchar" MaxLength="255" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="255" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="255" />
+          <Property Name="DATECREATE" Type="datetime" />
+          <Property Name="DATEUPDATE" Type="datetime" />
+          <Property Name="PLATEFORME" Type="int" />
+        </EntityType>
+        <EntityType Name="REGLEMENT">
+          <Key>
+            <PropertyRef Name="REGID" />
+          </Key>
+          <Property Name="REGID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="REGNUM" Type="varchar" MaxLength="255" />
+          <Property Name="DOSID" Type="int" />
+          <Property Name="TRNID" Type="int" />
+          <Property Name="REGDATE" Type="date" />
+          <Property Name="REGREF" Type="varchar" MaxLength="255" />
+          <Property Name="REGLIBELLE" Type="varchar" MaxLength="255" />
+          <Property Name="TIRID" Type="int" />
+          <Property Name="TIRPAYID" Type="int" />
+          <Property Name="REGMONTANT" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DEVID" Type="int" />
+          <Property Name="DEVCOURS" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="RGMID" Type="int" />
+          <Property Name="REGISIMPUTE" Type="int" />
+          <Property Name="REGTYPE" Type="int" />
+          <Property Name="REGECHEANCE" Type="date" />
+          <Property Name="REGMONTANTIMPUTE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="REGMONTANTSOLDE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="REGMONTANTECART" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="REGNOTE" Type="varchar" MaxLength="255" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="255" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="255" />
+          <Property Name="DATECREATE" Type="datetime" />
+          <Property Name="DATEUPDATE" Type="datetime" />
+          <Property Name="REGIDFROMMOBILE" Type="int" />
+          <Property Name="TTRNID" Type="int" />
+          <Property Name="TIRCAM" Type="int" />
+          <Property Name="CHQNUMERO" Type="varchar" MaxLength="255" />
+          <Property Name="CHQDATE" Type="date" />
+          <Property Name="CHQBANQUE" Type="varchar" MaxLength="255" />
+          <Property Name="REGNAT" Type="int" />
+        </EntityType>
+        <EntityType Name="TIERS">
+          <Key>
+            <PropertyRef Name="TIRID" />
+          </Key>
+          <Property Name="TIRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DOSID" Type="int" />
+          <Property Name="TIRCATID" Type="int" />
+          <Property Name="TIRCATTIERSID" Type="int" />
+          <Property Name="TIRTYPE" Type="varchar" MaxLength="1" />
+          <Property Name="TIRISINTERNE" Type="int" />
+          <Property Name="TIRCODE" Type="varchar" MaxLength="255" />
+          <Property Name="TIRCODEERP" Type="varchar" MaxLength="255" />
+          <Property Name="TIRSOCIETE" Type="varchar" MaxLength="255" />
+          <Property Name="TIRABREGE" Type="varchar" MaxLength="255" />
+          <Property Name="CPTCODE" Type="varchar" MaxLength="255" />
+          <Property Name="COLID" Type="int" />
+          <Property Name="ADRFID" Type="int" />
+          <Property Name="ADRLID" Type="int" />
+          <Property Name="CONTACTID" Type="int" />
+          <Property Name="TIRIDENTIFIANT" Type="varchar" MaxLength="255" />
+          <Property Name="TIRCIN" Type="varchar" MaxLength="255" />
+          <Property Name="TIRPATENTE" Type="int" />
+          <Property Name="TIRACTIVITE" Type="text" />
+          <Property Name="DEVID" Type="int" />
+          <Property Name="TRFID" Type="int" />
+          <Property Name="TRFPID" Type="int" />
+          <Property Name="RGMID" Type="int" />
+          <Property Name="TVATID" Type="int" />
+          <Property Name="TPFTID" Type="int" />
+          <Property Name="TIRISASSUJETTITVA" Type="int" />
+          <Property Name="TIRISASSUJETTITPF" Type="int" />
+          <Property Name="TIRISFACTURE" Type="int" />
+          <Property Name="TIRISACTIF" Type="int" />
+          <Property Name="TIRTAUXREMISE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="TIRTAUXESCOMPTE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="TIRPUREMISE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="TIRENCOURS" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="TIRNBFACT" Type="int" />
+          <Property Name="STATENUMID1" Type="int" />
+          <Property Name="STATENUMID2" Type="int" />
+          <Property Name="STATENUMID3" Type="int" />
+          <Property Name="STATENUMID4" Type="int" />
+          <Property Name="STATENUMID5" Type="int" />
+          <Property Name="STATENUMID6" Type="int" />
+          <Property Name="TIRLASTVISITE" Type="datetime" />
+          <Property Name="TIRRATE" Type="varchar" MaxLength="1" />
+          <Property Name="TIRSOLDER" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="TIRSOLDEINI" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="TIRISCREDIT" Type="int" />
+          <Property Name="TIRSITEINTERNE" Type="int" />
+          <Property Name="TIRAGREMENT" Type="varchar" MaxLength="255" />
+          <Property Name="TIRDATEAGREMENT" Type="datetime" />
+          <Property Name="TIRRISQUE" Type="int" />
+          <Property Name="TIRPAYEUR" Type="int" />
+          <Property Name="TIRFACTURE" Type="int" />
+          <Property Name="TIRNOTE" Type="text" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="255" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="255" />
+          <Property Name="DATECREATE" Type="datetime" />
+          <Property Name="DATEUPDATE" Type="datetime" />
+          <Property Name="TIRIDFROMMOBILE" Type="int" />
+          <Property Name="CREDITCONTENTIEUX" Type="decimal" Precision="24" Scale="6" />
+          <Property Name="CAMID" Type="int" />
+          <Property Name="FLAG_SYNC_ERP" Type="int" />
+          <Property Name="TIRICE" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'MT_1.dbo.ZDW_DOCUMENT_VIEW' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+        <EntityType Name="ZDW_DOCUMENT_VIEW">
+          <Key>
+            <PropertyRef Name="DOCID" />
+            <PropertyRef Name="DISTRIBUTEUR" />
+          </Key>
+          <Property Name="DOCID" Type="int" Nullable="false" />
+          <Property Name="DOCNUM" Type="varchar" MaxLength="255" />
+          <Property Name="DOMID" Type="int" />
+          <Property Name="TYPDOCID" Type="int" />
+          <Property Name="OPID" Type="int" />
+          <Property Name="TRFID" Type="int" />
+          <Property Name="ENTITYID" Type="int" />
+          <Property Name="ENTITYTYPE" Type="int" />
+          <Property Name="TIRPAYEUR" Type="int" />
+          <Property Name="TIRFACTURE" Type="int" />
+          <Property Name="ADRFID" Type="int" />
+          <Property Name="ADRLID" Type="int" />
+          <Property Name="DEPID" Type="int" />
+          <Property Name="DOCDATE" Type="date" />
+          <Property Name="RGMID" Type="int" />
+          <Property Name="TVATID" Type="int" />
+          <Property Name="INTERSITES" Type="int" />
+          <Property Name="DEVID" Type="int" />
+          <Property Name="DOCCOLISAGE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="CAMID" Type="int" />
+          <Property Name="VSTID" Type="int" />
+          <Property Name="TRNID" Type="int" />
+          <Property Name="DOCMNTHTBRUT" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DOCMNTREML" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DOCMNTG" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DOCMNTRETOUR" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DOCESCOMPTE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DOCMNTESCOMPTE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DOCMNTREMP" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DLPU" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DLPUISTTC" Type="int" />
+          <Property Name="DLPUHTBRUT" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DLPUTTC" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DLPUHTNET" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="DISTRIBUTEUR" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MT_1ModelStoreContainer">
+          <EntitySet Name="CAMION" EntityType="Self.CAMION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGLEMENT" EntityType="Self.REGLEMENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIERS" EntityType="Self.TIERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZDW_DOCUMENT_VIEW" EntityType="Self.ZDW_DOCUMENT_VIEW" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ZDW_DOCUMENT_VIEW].[DOCID] AS [DOCID], 
+    [ZDW_DOCUMENT_VIEW].[DOCNUM] AS [DOCNUM], 
+    [ZDW_DOCUMENT_VIEW].[DOMID] AS [DOMID], 
+    [ZDW_DOCUMENT_VIEW].[TYPDOCID] AS [TYPDOCID], 
+    [ZDW_DOCUMENT_VIEW].[OPID] AS [OPID], 
+    [ZDW_DOCUMENT_VIEW].[TRFID] AS [TRFID], 
+    [ZDW_DOCUMENT_VIEW].[ENTITYID] AS [ENTITYID], 
+    [ZDW_DOCUMENT_VIEW].[ENTITYTYPE] AS [ENTITYTYPE], 
+    [ZDW_DOCUMENT_VIEW].[TIRPAYEUR] AS [TIRPAYEUR], 
+    [ZDW_DOCUMENT_VIEW].[TIRFACTURE] AS [TIRFACTURE], 
+    [ZDW_DOCUMENT_VIEW].[ADRFID] AS [ADRFID], 
+    [ZDW_DOCUMENT_VIEW].[ADRLID] AS [ADRLID], 
+    [ZDW_DOCUMENT_VIEW].[DEPID] AS [DEPID], 
+    [ZDW_DOCUMENT_VIEW].[DOCDATE] AS [DOCDATE], 
+    [ZDW_DOCUMENT_VIEW].[RGMID] AS [RGMID], 
+    [ZDW_DOCUMENT_VIEW].[TVATID] AS [TVATID], 
+    [ZDW_DOCUMENT_VIEW].[INTERSITES] AS [INTERSITES], 
+    [ZDW_DOCUMENT_VIEW].[DEVID] AS [DEVID], 
+    [ZDW_DOCUMENT_VIEW].[DOCCOLISAGE] AS [DOCCOLISAGE], 
+    [ZDW_DOCUMENT_VIEW].[CAMID] AS [CAMID], 
+    [ZDW_DOCUMENT_VIEW].[VSTID] AS [VSTID], 
+    [ZDW_DOCUMENT_VIEW].[TRNID] AS [TRNID], 
+    [ZDW_DOCUMENT_VIEW].[DOCMNTHTBRUT] AS [DOCMNTHTBRUT], 
+    [ZDW_DOCUMENT_VIEW].[DOCMNTREML] AS [DOCMNTREML], 
+    [ZDW_DOCUMENT_VIEW].[DOCMNTG] AS [DOCMNTG], 
+    [ZDW_DOCUMENT_VIEW].[DOCMNTRETOUR] AS [DOCMNTRETOUR], 
+    [ZDW_DOCUMENT_VIEW].[DOCESCOMPTE] AS [DOCESCOMPTE], 
+    [ZDW_DOCUMENT_VIEW].[DOCMNTESCOMPTE] AS [DOCMNTESCOMPTE], 
+    [ZDW_DOCUMENT_VIEW].[DOCMNTREMP] AS [DOCMNTREMP], 
+    [ZDW_DOCUMENT_VIEW].[DLPU] AS [DLPU], 
+    [ZDW_DOCUMENT_VIEW].[DLPUISTTC] AS [DLPUISTTC], 
+    [ZDW_DOCUMENT_VIEW].[DLPUHTBRUT] AS [DLPUHTBRUT], 
+    [ZDW_DOCUMENT_VIEW].[DLPUTTC] AS [DLPUTTC], 
+    [ZDW_DOCUMENT_VIEW].[DLPUHTNET] AS [DLPUHTNET], 
+    [ZDW_DOCUMENT_VIEW].[DISTRIBUTEUR] AS [DISTRIBUTEUR]
+    FROM [dbo].[ZDW_DOCUMENT_VIEW] AS [ZDW_DOCUMENT_VIEW]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MT_1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CAMION">
+          <Key>
+            <PropertyRef Name="CAMID" />
+          </Key>
+          <Property Name="CAMID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CAMCODE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CAMINTITULE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DEPID" Type="Int32" />
+          <Property Name="DEVICEID" Type="Int32" />
+          <Property Name="CAMCHAUFFEURID" Type="Int32" />
+          <Property Name="CAMVENDEURID" Type="Int32" />
+          <Property Name="DOSID" Type="Int32" />
+          <Property Name="TIRCAM" Type="Int32" />
+          <Property Name="CAMISACTIF" Type="Int32" />
+          <Property Name="CAMMATRICULE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CAMDISPO" Type="Int32" />
+          <Property Name="CAMDATEVIDANGE" Type="DateTime" Precision="0" />
+          <Property Name="CAMVOLUME" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="CAMPOIDSSUPP" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="CAMLASTMISSION" Type="DateTime" Precision="0" />
+          <Property Name="CAMMODELE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CAMREFERENCE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CAMVISITE" Type="DateTime" Precision="0" />
+          <Property Name="CAMVIGNETTE" Type="DateTime" Precision="0" />
+          <Property Name="CAMNOTE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NUMEROTATION_PREFIX" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="USERUPDATE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="USERCREATE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DATECREATE" Type="DateTime" Precision="3" />
+          <Property Name="DATEUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="PLATEFORME" Type="Int32" />
+        </EntityType>
+        <EntityType Name="REGLEMENT">
+          <Key>
+            <PropertyRef Name="REGID" />
+          </Key>
+          <Property Name="REGID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="REGNUM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DOSID" Type="Int32" />
+          <Property Name="TRNID" Type="Int32" />
+          <Property Name="REGDATE" Type="DateTime" Precision="0" />
+          <Property Name="REGREF" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="REGLIBELLE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TIRID" Type="Int32" />
+          <Property Name="TIRPAYID" Type="Int32" />
+          <Property Name="REGMONTANT" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DEVID" Type="Int32" />
+          <Property Name="DEVCOURS" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="RGMID" Type="Int32" />
+          <Property Name="REGISIMPUTE" Type="Int32" />
+          <Property Name="REGTYPE" Type="Int32" />
+          <Property Name="REGECHEANCE" Type="DateTime" Precision="0" />
+          <Property Name="REGMONTANTIMPUTE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="REGMONTANTSOLDE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="REGMONTANTECART" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="REGNOTE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="USERUPDATE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="USERCREATE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DATECREATE" Type="DateTime" Precision="3" />
+          <Property Name="DATEUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="REGIDFROMMOBILE" Type="Int32" />
+          <Property Name="TTRNID" Type="Int32" />
+          <Property Name="TIRCAM" Type="Int32" />
+          <Property Name="CHQNUMERO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CHQDATE" Type="DateTime" Precision="0" />
+          <Property Name="CHQBANQUE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="REGNAT" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TIERS">
+          <Key>
+            <PropertyRef Name="TIRID" />
+          </Key>
+          <Property Name="TIRID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DOSID" Type="Int32" />
+          <Property Name="TIRCATID" Type="Int32" />
+          <Property Name="TIRCATTIERSID" Type="Int32" />
+          <Property Name="TIRTYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TIRISINTERNE" Type="Int32" />
+          <Property Name="TIRCODE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TIRCODEERP" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TIRSOCIETE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TIRABREGE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CPTCODE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="COLID" Type="Int32" />
+          <Property Name="ADRFID" Type="Int32" />
+          <Property Name="ADRLID" Type="Int32" />
+          <Property Name="CONTACTID" Type="Int32" />
+          <Property Name="TIRIDENTIFIANT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TIRCIN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TIRPATENTE" Type="Int32" />
+          <Property Name="TIRACTIVITE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DEVID" Type="Int32" />
+          <Property Name="TRFID" Type="Int32" />
+          <Property Name="TRFPID" Type="Int32" />
+          <Property Name="RGMID" Type="Int32" />
+          <Property Name="TVATID" Type="Int32" />
+          <Property Name="TPFTID" Type="Int32" />
+          <Property Name="TIRISASSUJETTITVA" Type="Int32" />
+          <Property Name="TIRISASSUJETTITPF" Type="Int32" />
+          <Property Name="TIRISFACTURE" Type="Int32" />
+          <Property Name="TIRISACTIF" Type="Int32" />
+          <Property Name="TIRTAUXREMISE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="TIRTAUXESCOMPTE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="TIRPUREMISE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="TIRENCOURS" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="TIRNBFACT" Type="Int32" />
+          <Property Name="STATENUMID1" Type="Int32" />
+          <Property Name="STATENUMID2" Type="Int32" />
+          <Property Name="STATENUMID3" Type="Int32" />
+          <Property Name="STATENUMID4" Type="Int32" />
+          <Property Name="STATENUMID5" Type="Int32" />
+          <Property Name="STATENUMID6" Type="Int32" />
+          <Property Name="TIRLASTVISITE" Type="DateTime" Precision="3" />
+          <Property Name="TIRRATE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TIRSOLDER" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="TIRSOLDEINI" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="TIRISCREDIT" Type="Int32" />
+          <Property Name="TIRSITEINTERNE" Type="Int32" />
+          <Property Name="TIRAGREMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TIRDATEAGREMENT" Type="DateTime" Precision="3" />
+          <Property Name="TIRRISQUE" Type="Int32" />
+          <Property Name="TIRPAYEUR" Type="Int32" />
+          <Property Name="TIRFACTURE" Type="Int32" />
+          <Property Name="TIRNOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="USERCREATE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="USERUPDATE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DATECREATE" Type="DateTime" Precision="3" />
+          <Property Name="DATEUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="TIRIDFROMMOBILE" Type="Int32" />
+          <Property Name="CREDITCONTENTIEUX" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="CAMID" Type="Int32" />
+          <Property Name="FLAG_SYNC_ERP" Type="Int32" />
+          <Property Name="TIRICE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ZDW_DOCUMENT_VIEW">
+          <Key>
+            <PropertyRef Name="DOCID" />
+            <PropertyRef Name="DISTRIBUTEUR" />
+          </Key>
+          <Property Name="DOCID" Type="Int32" Nullable="false" />
+          <Property Name="DOCNUM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DOMID" Type="Int32" />
+          <Property Name="TYPDOCID" Type="Int32" />
+          <Property Name="OPID" Type="Int32" />
+          <Property Name="TRFID" Type="Int32" />
+          <Property Name="ENTITYID" Type="Int32" />
+          <Property Name="ENTITYTYPE" Type="Int32" />
+          <Property Name="TIRPAYEUR" Type="Int32" />
+          <Property Name="TIRFACTURE" Type="Int32" />
+          <Property Name="ADRFID" Type="Int32" />
+          <Property Name="ADRLID" Type="Int32" />
+          <Property Name="DEPID" Type="Int32" />
+          <Property Name="DOCDATE" Type="DateTime" Precision="0" />
+          <Property Name="RGMID" Type="Int32" />
+          <Property Name="TVATID" Type="Int32" />
+          <Property Name="INTERSITES" Type="Int32" />
+          <Property Name="DEVID" Type="Int32" />
+          <Property Name="DOCCOLISAGE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="CAMID" Type="Int32" />
+          <Property Name="VSTID" Type="Int32" />
+          <Property Name="TRNID" Type="Int32" />
+          <Property Name="DOCMNTHTBRUT" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DOCMNTREML" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DOCMNTG" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DOCMNTRETOUR" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DOCESCOMPTE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DOCMNTESCOMPTE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DOCMNTREMP" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DLPU" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DLPUISTTC" Type="Int32" />
+          <Property Name="DLPUHTBRUT" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DLPUTTC" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DLPUHTNET" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="DISTRIBUTEUR" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MT_1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CAMION" EntityType="Self.CAMION" />
+          <EntitySet Name="REGLEMENT" EntityType="Self.REGLEMENT" />
+          <EntitySet Name="TIERS" EntityType="Self.TIERS" />
+          <EntitySet Name="ZDW_DOCUMENT_VIEW" EntityType="Self.ZDW_DOCUMENT_VIEW" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MT_1ModelStoreContainer" CdmEntityContainer="MT_1Entities">
+          <EntitySetMapping Name="CAMION">
+            <EntityTypeMapping TypeName="MT_1Model.CAMION">
+              <MappingFragment StoreEntitySet="CAMION">
+                <ScalarProperty Name="CAMID" ColumnName="CAMID" />
+                <ScalarProperty Name="CAMCODE" ColumnName="CAMCODE" />
+                <ScalarProperty Name="CAMINTITULE" ColumnName="CAMINTITULE" />
+                <ScalarProperty Name="DEPID" ColumnName="DEPID" />
+                <ScalarProperty Name="DEVICEID" ColumnName="DEVICEID" />
+                <ScalarProperty Name="CAMCHAUFFEURID" ColumnName="CAMCHAUFFEURID" />
+                <ScalarProperty Name="CAMVENDEURID" ColumnName="CAMVENDEURID" />
+                <ScalarProperty Name="DOSID" ColumnName="DOSID" />
+                <ScalarProperty Name="TIRCAM" ColumnName="TIRCAM" />
+                <ScalarProperty Name="CAMISACTIF" ColumnName="CAMISACTIF" />
+                <ScalarProperty Name="CAMMATRICULE" ColumnName="CAMMATRICULE" />
+                <ScalarProperty Name="CAMDISPO" ColumnName="CAMDISPO" />
+                <ScalarProperty Name="CAMDATEVIDANGE" ColumnName="CAMDATEVIDANGE" />
+                <ScalarProperty Name="CAMVOLUME" ColumnName="CAMVOLUME" />
+                <ScalarProperty Name="CAMPOIDSSUPP" ColumnName="CAMPOIDSSUPP" />
+                <ScalarProperty Name="CAMLASTMISSION" ColumnName="CAMLASTMISSION" />
+                <ScalarProperty Name="CAMMODELE" ColumnName="CAMMODELE" />
+                <ScalarProperty Name="CAMREFERENCE" ColumnName="CAMREFERENCE" />
+                <ScalarProperty Name="CAMVISITE" ColumnName="CAMVISITE" />
+                <ScalarProperty Name="CAMVIGNETTE" ColumnName="CAMVIGNETTE" />
+                <ScalarProperty Name="CAMNOTE" ColumnName="CAMNOTE" />
+                <ScalarProperty Name="NUMEROTATION_PREFIX" ColumnName="NUMEROTATION_PREFIX" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="DATECREATE" ColumnName="DATECREATE" />
+                <ScalarProperty Name="DATEUPDATE" ColumnName="DATEUPDATE" />
+                <ScalarProperty Name="PLATEFORME" ColumnName="PLATEFORME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGLEMENT">
+            <EntityTypeMapping TypeName="MT_1Model.REGLEMENT">
+              <MappingFragment StoreEntitySet="REGLEMENT">
+                <ScalarProperty Name="REGID" ColumnName="REGID" />
+                <ScalarProperty Name="REGNUM" ColumnName="REGNUM" />
+                <ScalarProperty Name="DOSID" ColumnName="DOSID" />
+                <ScalarProperty Name="TRNID" ColumnName="TRNID" />
+                <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+                <ScalarProperty Name="REGREF" ColumnName="REGREF" />
+                <ScalarProperty Name="REGLIBELLE" ColumnName="REGLIBELLE" />
+                <ScalarProperty Name="TIRID" ColumnName="TIRID" />
+                <ScalarProperty Name="TIRPAYID" ColumnName="TIRPAYID" />
+                <ScalarProperty Name="REGMONTANT" ColumnName="REGMONTANT" />
+                <ScalarProperty Name="DEVID" ColumnName="DEVID" />
+                <ScalarProperty Name="DEVCOURS" ColumnName="DEVCOURS" />
+                <ScalarProperty Name="RGMID" ColumnName="RGMID" />
+                <ScalarProperty Name="REGISIMPUTE" ColumnName="REGISIMPUTE" />
+                <ScalarProperty Name="REGTYPE" ColumnName="REGTYPE" />
+                <ScalarProperty Name="REGECHEANCE" ColumnName="REGECHEANCE" />
+                <ScalarProperty Name="REGMONTANTIMPUTE" ColumnName="REGMONTANTIMPUTE" />
+                <ScalarProperty Name="REGMONTANTSOLDE" ColumnName="REGMONTANTSOLDE" />
+                <ScalarProperty Name="REGMONTANTECART" ColumnName="REGMONTANTECART" />
+                <ScalarProperty Name="REGNOTE" ColumnName="REGNOTE" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="DATECREATE" ColumnName="DATECREATE" />
+                <ScalarProperty Name="DATEUPDATE" ColumnName="DATEUPDATE" />
+                <ScalarProperty Name="REGIDFROMMOBILE" ColumnName="REGIDFROMMOBILE" />
+                <ScalarProperty Name="TTRNID" ColumnName="TTRNID" />
+                <ScalarProperty Name="TIRCAM" ColumnName="TIRCAM" />
+                <ScalarProperty Name="CHQNUMERO" ColumnName="CHQNUMERO" />
+                <ScalarProperty Name="CHQDATE" ColumnName="CHQDATE" />
+                <ScalarProperty Name="CHQBANQUE" ColumnName="CHQBANQUE" />
+                <ScalarProperty Name="REGNAT" ColumnName="REGNAT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIERS">
+            <EntityTypeMapping TypeName="MT_1Model.TIERS">
+              <MappingFragment StoreEntitySet="TIERS">
+                <ScalarProperty Name="TIRID" ColumnName="TIRID" />
+                <ScalarProperty Name="DOSID" ColumnName="DOSID" />
+                <ScalarProperty Name="TIRCATID" ColumnName="TIRCATID" />
+                <ScalarProperty Name="TIRCATTIERSID" ColumnName="TIRCATTIERSID" />
+                <ScalarProperty Name="TIRTYPE" ColumnName="TIRTYPE" />
+                <ScalarProperty Name="TIRISINTERNE" ColumnName="TIRISINTERNE" />
+                <ScalarProperty Name="TIRCODE" ColumnName="TIRCODE" />
+                <ScalarProperty Name="TIRCODEERP" ColumnName="TIRCODEERP" />
+                <ScalarProperty Name="TIRSOCIETE" ColumnName="TIRSOCIETE" />
+                <ScalarProperty Name="TIRABREGE" ColumnName="TIRABREGE" />
+                <ScalarProperty Name="CPTCODE" ColumnName="CPTCODE" />
+                <ScalarProperty Name="COLID" ColumnName="COLID" />
+                <ScalarProperty Name="ADRFID" ColumnName="ADRFID" />
+                <ScalarProperty Name="ADRLID" ColumnName="ADRLID" />
+                <ScalarProperty Name="CONTACTID" ColumnName="CONTACTID" />
+                <ScalarProperty Name="TIRIDENTIFIANT" ColumnName="TIRIDENTIFIANT" />
+                <ScalarProperty Name="TIRCIN" ColumnName="TIRCIN" />
+                <ScalarProperty Name="TIRPATENTE" ColumnName="TIRPATENTE" />
+                <ScalarProperty Name="TIRACTIVITE" ColumnName="TIRACTIVITE" />
+                <ScalarProperty Name="DEVID" ColumnName="DEVID" />
+                <ScalarProperty Name="TRFID" ColumnName="TRFID" />
+                <ScalarProperty Name="TRFPID" ColumnName="TRFPID" />
+                <ScalarProperty Name="RGMID" ColumnName="RGMID" />
+                <ScalarProperty Name="TVATID" ColumnName="TVATID" />
+                <ScalarProperty Name="TPFTID" ColumnName="TPFTID" />
+                <ScalarProperty Name="TIRISASSUJETTITVA" ColumnName="TIRISASSUJETTITVA" />
+                <ScalarProperty Name="TIRISASSUJETTITPF" ColumnName="TIRISASSUJETTITPF" />
+                <ScalarProperty Name="TIRISFACTURE" ColumnName="TIRISFACTURE" />
+                <ScalarProperty Name="TIRISACTIF" ColumnName="TIRISACTIF" />
+                <ScalarProperty Name="TIRTAUXREMISE" ColumnName="TIRTAUXREMISE" />
+                <ScalarProperty Name="TIRTAUXESCOMPTE" ColumnName="TIRTAUXESCOMPTE" />
+                <ScalarProperty Name="TIRPUREMISE" ColumnName="TIRPUREMISE" />
+                <ScalarProperty Name="TIRENCOURS" ColumnName="TIRENCOURS" />
+                <ScalarProperty Name="TIRNBFACT" ColumnName="TIRNBFACT" />
+                <ScalarProperty Name="STATENUMID1" ColumnName="STATENUMID1" />
+                <ScalarProperty Name="STATENUMID2" ColumnName="STATENUMID2" />
+                <ScalarProperty Name="STATENUMID3" ColumnName="STATENUMID3" />
+                <ScalarProperty Name="STATENUMID4" ColumnName="STATENUMID4" />
+                <ScalarProperty Name="STATENUMID5" ColumnName="STATENUMID5" />
+                <ScalarProperty Name="STATENUMID6" ColumnName="STATENUMID6" />
+                <ScalarProperty Name="TIRLASTVISITE" ColumnName="TIRLASTVISITE" />
+                <ScalarProperty Name="TIRRATE" ColumnName="TIRRATE" />
+                <ScalarProperty Name="TIRSOLDER" ColumnName="TIRSOLDER" />
+                <ScalarProperty Name="TIRSOLDEINI" ColumnName="TIRSOLDEINI" />
+                <ScalarProperty Name="TIRISCREDIT" ColumnName="TIRISCREDIT" />
+                <ScalarProperty Name="TIRSITEINTERNE" ColumnName="TIRSITEINTERNE" />
+                <ScalarProperty Name="TIRAGREMENT" ColumnName="TIRAGREMENT" />
+                <ScalarProperty Name="TIRDATEAGREMENT" ColumnName="TIRDATEAGREMENT" />
+                <ScalarProperty Name="TIRRISQUE" ColumnName="TIRRISQUE" />
+                <ScalarProperty Name="TIRPAYEUR" ColumnName="TIRPAYEUR" />
+                <ScalarProperty Name="TIRFACTURE" ColumnName="TIRFACTURE" />
+                <ScalarProperty Name="TIRNOTE" ColumnName="TIRNOTE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="DATECREATE" ColumnName="DATECREATE" />
+                <ScalarProperty Name="DATEUPDATE" ColumnName="DATEUPDATE" />
+                <ScalarProperty Name="TIRIDFROMMOBILE" ColumnName="TIRIDFROMMOBILE" />
+                <ScalarProperty Name="CREDITCONTENTIEUX" ColumnName="CREDITCONTENTIEUX" />
+                <ScalarProperty Name="CAMID" ColumnName="CAMID" />
+                <ScalarProperty Name="FLAG_SYNC_ERP" ColumnName="FLAG_SYNC_ERP" />
+                <ScalarProperty Name="TIRICE" ColumnName="TIRICE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZDW_DOCUMENT_VIEW">
+            <EntityTypeMapping TypeName="MT_1Model.ZDW_DOCUMENT_VIEW">
+              <MappingFragment StoreEntitySet="ZDW_DOCUMENT_VIEW">
+                <ScalarProperty Name="DOCID" ColumnName="DOCID" />
+                <ScalarProperty Name="DOCNUM" ColumnName="DOCNUM" />
+                <ScalarProperty Name="DOMID" ColumnName="DOMID" />
+                <ScalarProperty Name="TYPDOCID" ColumnName="TYPDOCID" />
+                <ScalarProperty Name="OPID" ColumnName="OPID" />
+                <ScalarProperty Name="TRFID" ColumnName="TRFID" />
+                <ScalarProperty Name="ENTITYID" ColumnName="ENTITYID" />
+                <ScalarProperty Name="ENTITYTYPE" ColumnName="ENTITYTYPE" />
+                <ScalarProperty Name="TIRPAYEUR" ColumnName="TIRPAYEUR" />
+                <ScalarProperty Name="TIRFACTURE" ColumnName="TIRFACTURE" />
+                <ScalarProperty Name="ADRFID" ColumnName="ADRFID" />
+                <ScalarProperty Name="ADRLID" ColumnName="ADRLID" />
+                <ScalarProperty Name="DEPID" ColumnName="DEPID" />
+                <ScalarProperty Name="DOCDATE" ColumnName="DOCDATE" />
+                <ScalarProperty Name="RGMID" ColumnName="RGMID" />
+                <ScalarProperty Name="TVATID" ColumnName="TVATID" />
+                <ScalarProperty Name="INTERSITES" ColumnName="INTERSITES" />
+                <ScalarProperty Name="DEVID" ColumnName="DEVID" />
+                <ScalarProperty Name="DOCCOLISAGE" ColumnName="DOCCOLISAGE" />
+                <ScalarProperty Name="CAMID" ColumnName="CAMID" />
+                <ScalarProperty Name="VSTID" ColumnName="VSTID" />
+                <ScalarProperty Name="TRNID" ColumnName="TRNID" />
+                <ScalarProperty Name="DOCMNTHTBRUT" ColumnName="DOCMNTHTBRUT" />
+                <ScalarProperty Name="DOCMNTREML" ColumnName="DOCMNTREML" />
+                <ScalarProperty Name="DOCMNTG" ColumnName="DOCMNTG" />
+                <ScalarProperty Name="DOCMNTRETOUR" ColumnName="DOCMNTRETOUR" />
+                <ScalarProperty Name="DOCESCOMPTE" ColumnName="DOCESCOMPTE" />
+                <ScalarProperty Name="DOCMNTESCOMPTE" ColumnName="DOCMNTESCOMPTE" />
+                <ScalarProperty Name="DOCMNTREMP" ColumnName="DOCMNTREMP" />
+                <ScalarProperty Name="DLPU" ColumnName="DLPU" />
+                <ScalarProperty Name="DLPUISTTC" ColumnName="DLPUISTTC" />
+                <ScalarProperty Name="DLPUHTBRUT" ColumnName="DLPUHTBRUT" />
+                <ScalarProperty Name="DLPUTTC" ColumnName="DLPUTTC" />
+                <ScalarProperty Name="DLPUHTNET" ColumnName="DLPUHTNET" />
+                <ScalarProperty Name="DISTRIBUTEUR" ColumnName="DISTRIBUTEUR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

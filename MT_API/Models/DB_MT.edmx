@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ARTICLES">
+          <Key>
+            <PropertyRef Name="ARTID" />
+          </Key>
+          <Property Name="ARTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ARTCODE" Type="varchar" MaxLength="255" />
+          <Property Name="ARTTYPE" Type="int" />
+          <Property Name="ARTISACTIF" Type="int" />
+          <Property Name="ARTORDRE" Type="int" />
+          <Property Name="AFMID" Type="int" />
+          <Property Name="ARTUNCODE" Type="varchar" MaxLength="255" />
+          <Property Name="ARUNLIBELLE" Type="int" />
+          <Property Name="ARTDESIGNATION" Type="varchar" MaxLength="255" />
+          <Property Name="ARTDESIGNATIONMOBILE" Type="varchar" MaxLength="255" />
+          <Property Name="ARTCODEBARRE" Type="varchar" MaxLength="255" />
+          <Property Name="ARTISSTOCK" Type="int" />
+          <Property Name="ARTISVENDU" Type="int" />
+          <Property Name="ARTISFORFAIT" Type="int" />
+          <Property Name="ARTSUIVISTOCK" Type="int" />
+          <Property Name="ARTISSTATISTIQUE" Type="int" />
+          <Property Name="ARTISGARANTIE" Type="int" />
+          <Property Name="ARTISSOUMISCOM" Type="int" />
+          <Property Name="ARTISSOUMISREM" Type="int" />
+          <Property Name="ARTPRIXACH" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="ARTPRIXVEN" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="ARTPVISTTC" Type="int" />
+          <Property Name="ARTSEUILVENTE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="ARTQTEVENTEMINI" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="ARTPOIDS" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="ARTUNITEPOIDS" Type="varchar" MaxLength="255" />
+          <Property Name="ARTVOLUME" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="ARTUNITEVOL" Type="varchar" MaxLength="255" />
+          <Property Name="ARTLARGEUR" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="ARTLONGUEUR" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="ARTHAUTEUR" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="TVAID" Type="int" />
+          <Property Name="ARTPHOTO" Type="varchar" MaxLength="255" />
+          <Property Name="ARTCOLISAGE" Type="numeric" Precision="24" Scale="6" />
+          <Property Name="USERUPDATE" Type="varchar" MaxLength="255" />
+          <Property Name="USERCREATE" Type="varchar" MaxLength="255" />
+          <Property Name="DATECREATE" Type="datetime" />
+          <Property Name="DATEUPDATE" Type="datetime" />
+          <Property Name="DISTRIBUTEUR" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="MTModelStoreContainer">
+          <EntitySet Name="ARTICLES" EntityType="Self.ARTICLES" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ARTICLE">
+          <Key>
+            <PropertyRef Name="ARTID" />
+          </Key>
+          <Property Name="ARTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ARTCODE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ARTTYPE" Type="Int32" />
+          <Property Name="ARTISACTIF" Type="Int32" />
+          <Property Name="ARTORDRE" Type="Int32" />
+          <Property Name="AFMID" Type="Int32" />
+          <Property Name="ARTUNCODE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ARUNLIBELLE" Type="Int32" />
+          <Property Name="ARTDESIGNATION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ARTDESIGNATIONMOBILE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ARTCODEBARRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ARTISSTOCK" Type="Int32" />
+          <Property Name="ARTISVENDU" Type="Int32" />
+          <Property Name="ARTISFORFAIT" Type="Int32" />
+          <Property Name="ARTSUIVISTOCK" Type="Int32" />
+          <Property Name="ARTISSTATISTIQUE" Type="Int32" />
+          <Property Name="ARTISGARANTIE" Type="Int32" />
+          <Property Name="ARTISSOUMISCOM" Type="Int32" />
+          <Property Name="ARTISSOUMISREM" Type="Int32" />
+          <Property Name="ARTPRIXACH" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="ARTPRIXVEN" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="ARTPVISTTC" Type="Int32" />
+          <Property Name="ARTSEUILVENTE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="ARTQTEVENTEMINI" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="ARTPOIDS" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="ARTUNITEPOIDS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ARTVOLUME" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="ARTUNITEVOL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ARTLARGEUR" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="ARTLONGUEUR" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="ARTHAUTEUR" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="TVAID" Type="Int32" />
+          <Property Name="ARTPHOTO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ARTCOLISAGE" Type="Decimal" Precision="24" Scale="6" />
+          <Property Name="USERUPDATE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="USERCREATE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DATECREATE" Type="DateTime" Precision="3" />
+          <Property Name="DATEUPDATE" Type="DateTime" Precision="3" />
+          <Property Name="DISTRIBUTEUR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="MTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ARTICLES" EntityType="Self.ARTICLE" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MTModelStoreContainer" CdmEntityContainer="MTEntities">
+          <EntitySetMapping Name="ARTICLES">
+            <EntityTypeMapping TypeName="MTModel.ARTICLE">
+              <MappingFragment StoreEntitySet="ARTICLES">
+                <ScalarProperty Name="ARTID" ColumnName="ARTID" />
+                <ScalarProperty Name="ARTCODE" ColumnName="ARTCODE" />
+                <ScalarProperty Name="ARTTYPE" ColumnName="ARTTYPE" />
+                <ScalarProperty Name="ARTISACTIF" ColumnName="ARTISACTIF" />
+                <ScalarProperty Name="ARTORDRE" ColumnName="ARTORDRE" />
+                <ScalarProperty Name="AFMID" ColumnName="AFMID" />
+                <ScalarProperty Name="ARTUNCODE" ColumnName="ARTUNCODE" />
+                <ScalarProperty Name="ARUNLIBELLE" ColumnName="ARUNLIBELLE" />
+                <ScalarProperty Name="ARTDESIGNATION" ColumnName="ARTDESIGNATION" />
+                <ScalarProperty Name="ARTDESIGNATIONMOBILE" ColumnName="ARTDESIGNATIONMOBILE" />
+                <ScalarProperty Name="ARTCODEBARRE" ColumnName="ARTCODEBARRE" />
+                <ScalarProperty Name="ARTISSTOCK" ColumnName="ARTISSTOCK" />
+                <ScalarProperty Name="ARTISVENDU" ColumnName="ARTISVENDU" />
+                <ScalarProperty Name="ARTISFORFAIT" ColumnName="ARTISFORFAIT" />
+                <ScalarProperty Name="ARTSUIVISTOCK" ColumnName="ARTSUIVISTOCK" />
+                <ScalarProperty Name="ARTISSTATISTIQUE" ColumnName="ARTISSTATISTIQUE" />
+                <ScalarProperty Name="ARTISGARANTIE" ColumnName="ARTISGARANTIE" />
+                <ScalarProperty Name="ARTISSOUMISCOM" ColumnName="ARTISSOUMISCOM" />
+                <ScalarProperty Name="ARTISSOUMISREM" ColumnName="ARTISSOUMISREM" />
+                <ScalarProperty Name="ARTPRIXACH" ColumnName="ARTPRIXACH" />
+                <ScalarProperty Name="ARTPRIXVEN" ColumnName="ARTPRIXVEN" />
+                <ScalarProperty Name="ARTPVISTTC" ColumnName="ARTPVISTTC" />
+                <ScalarProperty Name="ARTSEUILVENTE" ColumnName="ARTSEUILVENTE" />
+                <ScalarProperty Name="ARTQTEVENTEMINI" ColumnName="ARTQTEVENTEMINI" />
+                <ScalarProperty Name="ARTPOIDS" ColumnName="ARTPOIDS" />
+                <ScalarProperty Name="ARTUNITEPOIDS" ColumnName="ARTUNITEPOIDS" />
+                <ScalarProperty Name="ARTVOLUME" ColumnName="ARTVOLUME" />
+                <ScalarProperty Name="ARTUNITEVOL" ColumnName="ARTUNITEVOL" />
+                <ScalarProperty Name="ARTLARGEUR" ColumnName="ARTLARGEUR" />
+                <ScalarProperty Name="ARTLONGUEUR" ColumnName="ARTLONGUEUR" />
+                <ScalarProperty Name="ARTHAUTEUR" ColumnName="ARTHAUTEUR" />
+                <ScalarProperty Name="TVAID" ColumnName="TVAID" />
+                <ScalarProperty Name="ARTPHOTO" ColumnName="ARTPHOTO" />
+                <ScalarProperty Name="ARTCOLISAGE" ColumnName="ARTCOLISAGE" />
+                <ScalarProperty Name="USERUPDATE" ColumnName="USERUPDATE" />
+                <ScalarProperty Name="USERCREATE" ColumnName="USERCREATE" />
+                <ScalarProperty Name="DATECREATE" ColumnName="DATECREATE" />
+                <ScalarProperty Name="DATEUPDATE" ColumnName="DATEUPDATE" />
+                <ScalarProperty Name="DISTRIBUTEUR" ColumnName="DISTRIBUTEUR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

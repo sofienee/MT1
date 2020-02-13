@@ -1,0 +1,369 @@
+﻿@model MT.Models.ArticleMvcModel
+@{
+    ViewBag.Title = "AddOrEdit";
+}
+
+@using (Html.BeginForm("AddOrEdit", "Article", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    @Html.HiddenFor(model => model.ARTID)
+    <table>
+        <tr>
+            <th>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ARTCODE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTCODE, new { htmlAttributes = new { @class = "form-control", @required = "required" , placeholder = "tesiting" } })
+                    @Html.ValidationMessageFor(model => model.ARTCODE)
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ARTTYPE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTTYPE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ARTISACTIF, new { @class = "control-label" })
+                    @*@Html.EditorFor(model => model.ARTISACTIF, new { htmlAttributes = new { @class = "form-control", @required = "required" } })*@
+                    @Html.DropDownListFor(model => model.ARTISACTIF, new SelectList(new string[] { "0", "1" }), htmlAttributes: new { @class = "form-control", @required = "required" })
+
+
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTORDRE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTORDRE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @*@Html.DropDownListFor(model => model.ARTORDRE, new SelectList(Enumerable.Empty<SelectListItem>(), "ARTORDRE"), htmlAttributes: new { @class = "form-control", @required = "required" })*@
+
+
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.AFMID, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.AFMID, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTUNCODE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTUNCODE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARUNLIBELLE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARUNLIBELLE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTDESIGNATION, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTDESIGNATION, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTDESIGNATIONMOBILE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTDESIGNATIONMOBILE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTCODEBARRE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTCODEBARRE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTISSTOCK, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTISSTOCK, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTISVENDU, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTISVENDU, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTISFORFAIT, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTISFORFAIT, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTSUIVISTOCK, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTSUIVISTOCK, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTISSTATISTIQUE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTISSTATISTIQUE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTISGARANTIE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTISGARANTIE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTISSOUMISCOM, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTISSOUMISCOM, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTISSOUMISREM, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTISSOUMISREM, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTPRIXACH, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTPRIXACH, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTPRIXVEN, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTPRIXVEN, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTPVISTTC, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTPVISTTC, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTSEUILVENTE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTSEUILVENTE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTQTEVENTEMINI, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTQTEVENTEMINI, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTPOIDS, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTPOIDS, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTUNITEPOIDS, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTUNITEPOIDS, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTVOLUME, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTVOLUME, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTUNITEVOL, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTUNITEVOL, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTLARGEUR, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTLARGEUR, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTLONGUEUR, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTLONGUEUR, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTHAUTEUR, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTHAUTEUR, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.TVAID, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.TVAID, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTPHOTO, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTPHOTO, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.ARTCOLISAGE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.ARTCOLISAGE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.USERUPDATE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.USERUPDATE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.USERCREATE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.USERCREATE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.DATECREATE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.DATECREATE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.DATEUPDATE, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.DATEUPDATE, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+            <th>
+            </th>
+
+            <th>
+                <div class="form-group">
+
+                    @Html.LabelFor(model => model.DISTRIBUTEUR, new { @class = "control-label" })
+                    @Html.EditorFor(model => model.DISTRIBUTEUR, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                </div>
+            </th>
+        </tr>
+</table>
+
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+            <input type="reset" value="Reset" class="btn" />
+        </div>
+        @section scripts{
+            @Scripts.Render("~/bundles/jqueryval");
+        }
+}
+
+
